@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "aside section1 section2 nav"
+        "aside section3 section4 nav"
+        "article article article article"
+        "footer footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr 0.8fr;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: #FFFAF0;
+}
+
+/* HEADER */
+header {
+    grid-area: header;
+    background-color: #5D9CEC;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ASIDE */
+aside {
+    grid-area: aside;
+    background-color: #D9EDF7;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* SECTIONS */
+/* SECTIONS mejorados */
+section {
+    background-color: #F5F5F5;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 13px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 4px;
+    text-align: center;
+}
+
+/* INPUT dentro de sections */
+section input[type="text"],
+section input[type="number"],
+section input[type="email"],
+section input[type="password"] {
+    width: 80%;
+    padding: 8px 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+section input:focus {
+    border: 1px solid #5D9CEC;
+}
+
+/* BOTÓN dentro de sections */
+section button {
+    padding: 8px 16px;
+    background-color: #5D9CEC;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section button:hover {
+    background-color: #4A89DC;
+}
+
+/* NAV mejorado */
+nav {
+    grid-area: nav;
+    background-color: #FCF8E3;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista sin viñetas y espacio entre elementos */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Enlaces */
+nav a {
+    text-decoration: none;
+    color: #31708F;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover en nav */
+nav a:hover {
+    background-color: #31708F;
+    color: white;
+}
+
+/* ARTICLE */
+article {
+    grid-area: article;
+    background-color: #DFF0D8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    width: 50%;              /* Controla el tamaño del article */
+    margin: 0 auto;          /* Asegura que el artículo esté centrado */
+}
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    background-color: #F2DEDE;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
